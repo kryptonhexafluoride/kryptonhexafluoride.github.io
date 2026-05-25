@@ -1,3 +1,27 @@
-h1 {
-    font-family: 'Courier New', Courier, monospace;
+.title {
+    text-align: center;
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav, nav ul, nav ul li {
+    list-style-position: inside;
+    text-align: center;
+}
+
+.primary-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.primary-menu a {
+    display: block;
+    padding: 0.8em 1.2em;
+    margin: 0.5em;
+    text-decoration: none;
+    font-weight: bold;
 }
