@@ -8,27 +8,22 @@
 </head>
 
 <body>
-    <script>
-        if (!window.location.hash) {
-            window.location.hash = '#home';
-        }
-    </script>
-    <h1 class="title"> hello world </h1>
-    <nav class="primary-menu"> 
-        <ul>
-            <li> <a href="#home">home</a></li>
-            <li> <a href="#resume">resume</a></li>
-            <li> <a href="#projects">projects</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1 class="title"> hello world </h1>
+        <div role="radiogroup" class="primary-menu"> 
+            <label><input type="radio" name="nav" id="home" checked>home</label>
+            <label><input type="radio" name="nav" id="resume">resume</label>
+            <label><input type="radio" name="nav" id="projects">projects</label>
+        </div>        
+    </header>
     <div class="content-wrapper">
-        <div class="page" id="home"> 
+        <div id="tab-home"> 
             <p> Welcome to my portfolio website. Currently everything is under construction but eventually there will be links here to various things I have done. </p>
         </div>
-        <div class="page" id="resume"> 
+        <div id="tab-resume"> 
             <p> Resume </p>
         </div>
-        <div class="page" id="projects"> 
+        <div id="tab-projects"> 
             <p> Projects </p>
         </div>
     </div>
