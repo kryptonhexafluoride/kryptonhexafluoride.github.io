@@ -18,17 +18,16 @@
         margin-left: 10px;
         margin-right: 10px;
         &:has(input:checked) {
-            box-shadow: inset 0px 0px 8px 0px #888;
+            color: purple;
+            font-style:italic;
         }
         &:has(input:focus-visible) {
             outline: 2px solid #000;
         }
-        box-shadow: inset 0px 0px 1.2px 0px #000;
         padding: 10px;
         cursor: pointer;
-        background: #0002;
-        &:hover { background: #0004; }
-        &:active { background: #0006; }
+        &:hover { background: rgba(147, 147, 147, 0.267); }
+        &:active { background: rgba(98, 98, 98, 0.4); }
     }
     input {
         opacity: 0;
@@ -37,14 +36,17 @@
     }
 }
 
-/* Page body */
 body:has(#home:not(:checked)) #tab-home, 
 body:has(#resume:not(:checked)) #tab-resume, 
-body:has(#projects:not(:checked)) #tab-projects {
+body:has(#projects:not(:checked)) #tab-projects,
+body:has(#contact:not(:checked)) #tab-contact {
     display: none;
 }
 
+/* Page body */
 .content-wrapper {
     margin-left: 30px;
     margin-right: 30px;
 }
+
+/* Footer */

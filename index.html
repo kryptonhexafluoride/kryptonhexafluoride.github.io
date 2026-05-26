@@ -14,6 +14,7 @@
             <label><input type="radio" name="nav" id="home" checked>home</label>
             <label><input type="radio" name="nav" id="resume">resume</label>
             <label><input type="radio" name="nav" id="projects">projects</label>
+            <label><input type="radio" name="nav" id="contact">contact</label>
         </div>        
     </header>
     <div class="content-wrapper">
@@ -21,10 +22,20 @@
             <p> Welcome to my portfolio website. Currently everything is under construction but eventually there will be links here to various things I have done. </p>
         </div>
         <div id="tab-resume"> 
-            <p> Resume </p>
+            <object data="/resume.pdf" type="application/pdf" width="100%" height="100%">
+                <p> 
+                    Click to directly <a href="/resume.pdf">download the file</a>.
+                </p>
+            </object>
         </div>
         <div id="tab-projects"> 
             <p> Projects </p>
         </div>
+        <div id="tab-contact"> 
+            <p> Contact </p>
+        </div>
     </div>
+    <footer>
+        <!-- <div role="button">toggle light/dark mode</div> -->
+    </footer>
 </body>
