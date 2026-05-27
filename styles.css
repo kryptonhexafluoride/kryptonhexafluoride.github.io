@@ -85,7 +85,10 @@ a {
         color: rgb(75, 75, 75);
     }
 }
-
+.pdf-embed {
+    width: 50%;
+    height: 100%;
+}
 /* Footer */
 .footer-text {
     font-style: italic;
