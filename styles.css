@@ -1,6 +1,15 @@
+/* Variables */
+:root {
+    --main-text-color: rgb(0, 0, 0);
+    --bright-text-color: rgb(207, 124, 170);
+    --dim-text-color: rgb(87, 52, 79);
+    --grey-text-color: rgb(91, 87, 91);
+}
+
 /* Overall */
 body {
     font-family: "IM Fell DW Pica", serif;
+    color: var(--main-text-color);
     text-align: center;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -9,24 +18,24 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    color: rgb(121, 176, 174);
-}
-summary::marker {
-    content: '+ ';
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(52, 80, 87);
-    font-weight: bold;
-}
-details[open] summary::marker {
-    content: '- ';
-    color: rgb(121, 176, 174);
+    color: var(--bright-text-color);
 }
 summary {
-    color: rgb(87, 91, 90);
+    color: var(--dim-text-color);
     font-style: italic;
     &:hover {
         cursor: pointer;
     }
+    &::marker {
+        content: '+ ';
+        font-family: 'Courier New', Courier, monospace;
+        color:var(--dim-text-color);
+        font-weight: bold;
+    }
+}
+details[open] summary::marker {
+    content: '- ';
+    color: var(--bright-text-color);
 }
 
 /* Page title  */
@@ -36,7 +45,7 @@ summary {
     font-style: normal;
     font-size: 85px;
     margin: 0 0 0 0;
-    color: rgb(52, 80, 87);
+    color:var(--dim-text-color);
 }
 
 /* Navigation menu  */
@@ -46,15 +55,15 @@ summary {
     list-style-position: inside;
     text-align: center;
     label {
-        color: rgb(52, 80, 87);
+        color:var(--dim-text-color);
         margin-left: 10px;
         margin-right: 10px;
         &:has(input:checked) {
-            color: rgb(121, 176, 174);
+            color: var(--bright-text-color);
             font-style:italic;
         }
         &:has(input:focus-visible) {
-            outline: 2px solid #000;
+            outline: 2px solid var(--main-text-color);
         }
         padding: 10px;
         cursor: pointer;
@@ -100,16 +109,16 @@ body:has(#contact:not(:checked)) #tab-contact {
     font-size: 0px;
 }
 a {
-    color: rgb(72, 141, 139);
+    color: var(--bright-text-color);
     &:visited {
-        color: #3c5459;
+        color: var(--dim-text-color);
     }
     &:active {
-        color: rgb(89, 197, 193);
+        color: var(--bright-text-color);
     }
     &:hover {
         font-style: italic;
-        color: rgb(75, 75, 75);
+        color: var(--grey-text-color);
     }
 }
 .pdf-embed {
