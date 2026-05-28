@@ -19,13 +19,14 @@ summary::marker {
 }
 details[open] summary::marker {
     content: '- ';
-    font-family: 'Courier New', Courier, monospace-;
     color: rgb(121, 176, 174);
-    font-weight: bold;
 }
 summary {
     color: rgb(87, 91, 90);
     font-style: italic;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 /* Page title  */
