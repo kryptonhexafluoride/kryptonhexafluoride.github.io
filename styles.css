@@ -1,14 +1,15 @@
 /* Variables */
 :root {
     --main-text-color: rgb(0, 0, 0);
-    --bright-text-color: rgb(207, 124, 170);
-    --dim-text-color: rgb(87, 52, 79);
-    --grey-text-color: rgb(91, 87, 91);
+    --bright-text-color: rgb(206, 138, 185);
+    --dim-text-color: lch(from var(--bright-text-color) 30% 20% h);
+    --grey-text-color: lch(from var(--bright-text-color) l 5% h);
 }
 
 /* Overall */
 body {
     font-family: "IM Fell DW Pica", serif;
+    font-size: 18px;
     color: var(--main-text-color);
     text-align: center;
     display: grid;
@@ -44,7 +45,7 @@ details[open] summary::marker {
     font-family: "Qwitcher Grypen", cursive;
     font-weight: 700;
     font-style: normal;
-    font-size: 120px;
+    font-size: 150px;
     margin: 0 0 0 0;
     color:var(--dim-text-color);
 }
@@ -93,8 +94,8 @@ body:has(#contact:not(:checked)) #tab-contact {
 
 /* Page body */
 .content-wrapper {
-    margin-left: 15lvw;
-    margin-right: 15lvw;
+    margin-left: 20lvw;
+    margin-right: 20lvw;
     min-height: 100lvh;
 }
 #tab-projects, #tab-home, #tab-resume, #tab-contact {
@@ -133,6 +134,35 @@ a {
     border: 10px black;
     box-shadow:black
 }
+
+figcaption {
+    font-style: italic;
+    font-size: 15px;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    &:target {
+        display: block;
+    }
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
 
 /* Footer */
 .footer-text {
