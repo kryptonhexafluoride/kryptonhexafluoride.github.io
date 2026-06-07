@@ -15,9 +15,10 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 .section-header {
+    font-family: "Qwitcher Grypen", cursive;
     font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 40px;
     color: var(--bright-text-color);
 }
 summary {
@@ -40,10 +41,10 @@ details[open] summary::marker {
 
 /* Page title  */
 .title {
-    font-family: "Lavishly Yours", cursive;
-    font-weight: 400;
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
     font-style: normal;
-    font-size: 85px;
+    font-size: 120px;
     margin: 0 0 0 0;
     color:var(--dim-text-color);
 }
@@ -95,10 +96,11 @@ body:has(#contact:not(:checked)) #tab-contact {
     margin-left: 15lvw;
     margin-right: 15lvw;
     min-height: 100lvh;
-    div {
-        height: 100%
-    }
 }
+#tab-projects, #tab-home, #tab-resume, #tab-contact {
+    height: 100%
+}
+
 @media (max-width: 768px) {
     .content-wrapper {
         margin-left: 5lvw;
@@ -125,6 +127,13 @@ a {
     height: 100%;
     width: 100%
 }
+.project-image {
+    height: 100%;
+    width: 100%;
+    border: 10px black;
+    box-shadow:black
+}
+
 /* Footer */
 .footer-text {
     font-style: italic;
