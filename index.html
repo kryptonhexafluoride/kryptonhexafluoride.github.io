@@ -20,7 +20,8 @@
     </header>
     <main class="content-wrapper">
         <div id="tab-home"> 
-            <p> Welcome to my portfolio website. Currently everything is under construction but eventually there will be links here to various things I have done. </p>
+            <p> Welcome to my portfolio website. </p>
+            <p> A fair amount of this is still under construction, but the Resume, Projects, and Contact tabs are fully functional. </p>
             <!-- TODO whatever the helly this is -->
             <!-- <input type="color"> Choose your own adventure -->
         </div> 
@@ -33,7 +34,8 @@
             </object>
         </div>
         <div id="tab-projects"> 
-            <p>Click on the name of a project to see more info.</p>
+            <p>This page is for supplementary material that can't really be described in the scope of a resume.</p>
+            <p>Click on the name of a project to see more info, or use Ctrl+F to search if you'd like. To magnify an image, click on it.</p>
             <hr/>
             <details name="project"> 
                 <summary>
@@ -113,7 +115,26 @@
                     <span class="section-header">cross-repository search<br/></span>
                     <p>lawrence livermore national laboratory | summer 2025</p>
                 </summary> 
-                <p> As an intern at LLNL, I worked on improving the organization and structue of the laboratory's internal databases through a cross-repository search system. </p>
+                <p> As a part of LLNL's DSTI (Defense Science and Technology Internship) program, I worked on improving the organization and structue of the laboratory's internal databases through a cross-repository search system. I was solely responsible for designing and implementing the federated search proof-of-concept for this system, but worked closely with two other interns who investigated different approaches. </p>
+                <p> I implemented the frontend of this project in Angular.js, using the Material UI framework. I used FastAPI for the backend, which queried various laboratory databases and presented an aggregate ranking of their results, in addition to a token-based authentication system that handled logins for every database at once. </p>
+                <figure>
+                    <a href="#searchposter">
+                        <img class="project-image" src="./images/searchposter.png">
+                    </a>
+                    <figcaption>the poster i made along with the other two interns at the end of our program</figcaption>
+                </figure>
+                <a href="#" class="lightbox" id="searchposter">
+                    <span style="background-image: url(images/searchposter.png);"></span>
+                </a>
+                <figure>
+                    <a href="#searchscreenshot">
+                        <img class="project-image" src="./images/searchscreenshot.png">
+                    </a>
+                    <figcaption>a screenshot of the final search UI i created</figcaption>
+                </figure>
+                <a href="#" class="lightbox" id="searchscreenshot">
+                    <span style="background-image: url(images/searchscreenshot.png);"></span>
+                </a>
             </details>
             <hr/> 
             <details name="project"> 
@@ -121,7 +142,14 @@
                     <span class="section-header">linvakri's guide to syrkarn<br/></span>
                     <p>dmsguild.com | 2023-2024</p>
                 </summary> 
-                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat eu sem non congue. Sed quis tortor nec mi varius posuere. Vestibulum ut vestibulum dui. Curabitur hendrerit pulvinar turpis, et condimentum nulla feugiat ut. Ut ut quam ipsum. In vitae lectus ante. Etiam efficitur efficitur ipsum sed mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent eget augue efficitur, cursus leo in, mollis tortor.  </p>
+                <p> This is a 140+ page DMsGuild supplement I wrote in my spare time, formed from notes I used for a personal D&D campaign. The idea for this project came from a seven-page description of the Syrkarn region in the <i>Secrets of Sarlona</i> sourcebook for the Eberron setting, which I fleshed out into a full setting in itself, with additional locations, characters, and worldbuilding details. </p>
+                <p> While not as technical as my other projects and the main body of my work, I still feel as though this is an important project to include here because of how much of my creative style it displays. Also, I'm still extremely proud of it, and I had a lot of fun working on it! There is a free preview of the entire book available on DMsGuild. </p>
+                <figure>
+                    <a href="https://www.dmsguild.com/en/product/429681/linvakri-s-guide-to-syrkarn">
+                        <img class="project-image" src="./images/dmg.png">
+                    </a>
+                    <figcaption>the front cover of this project. to view it on DMsGuild, you can click the image or visit <a href="https://www.dmsguild.com/en/product/429681/linvakri-s-guide-to-syrkarn">this link</a>. </figcaption>
+                </figure>
             </details>
             <hr/> 
             <details name="project"> 
@@ -129,7 +157,35 @@
                     <span class="section-header">video game project - grieve<br/></span>
                     <p>uc san diego | 2021</p>
                 </summary> 
-                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat eu sem non congue. Sed quis tortor nec mi varius posuere. Vestibulum ut vestibulum dui. Curabitur hendrerit pulvinar turpis, et condimentum nulla feugiat ut. Ut ut quam ipsum. In vitae lectus ante. Etiam efficitur efficitur ipsum sed mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent eget augue efficitur, cursus leo in, mollis tortor.  </p>
+                <p> As part of my CSE 125 coursework at UCSD, my project group and I created our own video game and engine from scratch. I was mainly responsible for the art direction and parts of the soundtrack, but helped out a little with the programming as well. </p>
+                <p> Here are some of the 2D art assets I created. This was meant to be a four-player assymetrical game, with one person playing a monster and the other three as hunters sent to kill it. </p>
+                <figure>
+                    <a href="#howtoplay">
+                        <img class="project-image" src="./images/howtoplay.png">
+                    </a>
+                    <figcaption>how to play screen</figcaption>
+                </figure>
+                <a href="#" class="lightbox" id="howtoplay">
+                    <span style="background-image: url(images/howtoplay.png)"></span>
+                </a>
+                <figure>
+                    <a href="#icons">
+                        <img class="project-image" src="./images/icons.png">
+                    </a>
+                    <figcaption>various attack/action icons</figcaption>
+                </figure>
+                <a href="#" class="lightbox" id="icons">
+                    <span style="background-image: url(images/icons.png)"></span>
+                </a>
+                <figure>
+                    <a href="#gameover">
+                        <img class="project-image" src="./images/gameover.png">
+                    </a>
+                    <figcaption>game over screen</figcaption>
+                </figure>
+                <a href="#" class="lightbox" id="gameover">
+                    <span style="background-image: url(images/gameover.png)"></span>
+                </a>
             </details>
             <hr/> 
             <details name="project"> 
@@ -138,6 +194,78 @@
                     <p>ongoing</p>
                 </summary> 
                 <p> Here are some things I've drawn, both commissioned and otherwise! </p>
+                <figure>
+                    <a href="#adar">
+                        <img class="project-image" src="./images/adar.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="adar">
+                    <span style="background-image: url(images/adar.png)"></span>
+                </a>
+                <figure>
+                    <a href="#blackgrove">
+                        <img class="project-image" src="./images/blackgrove.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="blackgrove">
+                    <span style="background-image: url(images/blackgrove.png)"></span>
+                </a>
+                <figure>
+                    <a href="#crya">
+                        <img class="project-image" src="./images/crya.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="crya">
+                    <span style="background-image: url(images/crya.png)"></span>
+                </a>
+                <figure>
+                    <a href="#farlnen">
+                        <img class="project-image" src="./images/farlnen.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="farlnen">
+                    <span style="background-image: url(images/farlnen.png)"></span>
+                </a>
+                <figure>
+                    <a href="#rainband">
+                        <img class="project-image" src="./images/rainband.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="rainband">
+                    <span style="background-image: url(images/rainband.png)"></span>
+                </a>
+                <figure>
+                    <a href="#reaches">
+                        <img class="project-image" src="./images/reaches.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="reaches">
+                    <span style="background-image: url(images/reaches.png)"></span>
+                </a>
+                <figure>
+                    <a href="#sarlona">
+                        <img class="project-image" src="./images/sarlona.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="sarlona">
+                    <span style="background-image: url(images/sarlona.png)"></span>
+                </a>
+                <figure>
+                    <a href="#seren">
+                        <img class="project-image" src="./images/seren.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="seren">
+                    <span style="background-image: url(images/seren.png)"></span>
+                </a>
+                <figure>
+                    <a href="#syrkarn">
+                        <img class="project-image" src="./images/syrkarn.png">
+                    </a>
+                </figure>
+                <a href="#" class="lightbox" id="syrkarn">
+                    <span style="background-image: url(images/syrkarn.png)"></span>
+                </a>
             </details>
             <hr/> 
         </div>
