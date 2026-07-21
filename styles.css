@@ -1,5 +1,8 @@
 /* Variables */
 :root {
+
+    /* I guess we can do red yellow green blue purple for the colours, and then light dark for the schemes */
+    /* because having literally infinite colours will make it look dogshit */
     --main-text-color: rgb(0, 0, 0);
     --bright-text-color: rgb(206, 138, 185);
     --dim-text-color: lch(from var(--bright-text-color) 30% 20% h);
@@ -102,10 +105,13 @@ body:has(#contact:not(:checked)) #tab-contact {
     height: 100%
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .content-wrapper {
         margin-left: 5lvw;
         margin-right: 5lvw;
+    }
+    .title {
+        font-size: 90px;
     }
 }
 .sneaky {
