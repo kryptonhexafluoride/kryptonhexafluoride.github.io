@@ -28,7 +28,7 @@
 
     @media (prefers-color-scheme: dark) {
         --main-text-color: #cdd6f4;
-        --page-background: #232634;
+        --page-background: #181825;
 
         --red-main: var(--red-light);
         --yellow-main: var(--yellow-light);
@@ -84,7 +84,7 @@
 
         body:has(#light-dark:checked) {
             --main-text-color: #cdd6f4;
-            --page-background: #232634;
+            --page-background: #1e1e2e;
 
             --red-main: var(--red-light);
             --yellow-main: var(--yellow-light);
