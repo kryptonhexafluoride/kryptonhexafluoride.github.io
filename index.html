@@ -11,30 +11,28 @@
 <body>
     <header>
         <h1 class="title"> hello, world! </h1>
+        -------------------------------------------------------
+        <div role="radiogroup" class="colour-scheme-picker">
+            <label class="red"><input type="radio" name="colour" id="red">  </label>
+            <label class="yellow"><input type="radio" name="colour" id="yellow">  </label>
+            <label class="green"><input type="radio" name="colour" id="green">  </label>
+            <label class="blue"><input type="radio" name="colour" id="blue">  </label>
+            <label class="purple"><input type="radio" name="colour" id="purple">  </label>
+            <label class="greyscale"><input type="radio" name="colour" id="greyscale" checked>  </label>
+        </div>
+        <div class="colour-scheme-picker">
+            <label class="light-dark"><input type="checkbox" id="light-dark">☼ / ☾</label>
+        </div>
+        -------------------------------------------------------
         <div role="radiogroup" class="primary-menu"> 
-            <label><input type="radio" name="nav" id="home" checked>home</label>
+            <label><input type="radio" name="nav" id="projects" checked>projects</label>
             <label><input type="radio" name="nav" id="resume">resume</label>
-            <label><input type="radio" name="nav" id="projects">projects</label>
             <label><input type="radio" name="nav" id="contact">contact</label>
         </div> 
     </header>
     <main class="content-wrapper">
-        <div id="tab-home"> 
-            <p> Welcome to my portfolio website. </p>
-            <p> A fair amount of this is still under construction, but the Resume, Projects, and Contact tabs are fully functional. </p>
-            <!-- TODO whatever the helly this is -->
-            <!-- <input type="color"> Choose your own adventure -->
-        </div> 
-        <div id="tab-resume"> 
-            <object data="/resume.pdf" type="application/pdf" class="pdf-embed">
-                <p> 
-                    It looks like your embedded PDF reader doesn't work. <br/>
-                    Click to directly <a href="./resume.pdf">download the file</a>.
-                </p>
-            </object>
-        </div>
         <div id="tab-projects"> 
-            <p>This page is for supplementary material that can't really be described in the scope of a resume.</p>
+            <p> Welcome to my portfolio website! </p>
             <p>Click on the name of a project to see more info, or use Ctrl+F to search if you'd like. To magnify an image, click on it.</p>
             <hr/>
             <details name="project"> 
@@ -268,6 +266,14 @@
                 </a>
             </details>
             <hr/> 
+        </div>
+        <div id="tab-resume"> 
+            <object data="/resume.pdf" type="application/pdf" class="pdf-embed">
+                <p> 
+                    It looks like your embedded PDF reader doesn't work. <br/>
+                    Click to directly <a href="./resume.pdf">download the file</a>.
+                </p>
+            </object>
         </div>
         <div id="tab-contact"> 
             <p> For safety reasons I would prefer not to put an open contact form on a public facing site like this. Here are some possible ways I can be contacted.</p>

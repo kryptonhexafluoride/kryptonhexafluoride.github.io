@@ -1,16 +1,139 @@
-/* Variables */
+/* Colour Scheme Stuff */
 :root {
 
-    /* I guess we can do red yellow green blue purple for the colours, and then light dark for the schemes */
-    /* because having literally infinite colours will make it look dogshit */
-    --main-text-color: rgb(0, 0, 0);
-    --bright-text-color: rgb(206, 138, 185);
-    --dim-text-color: lch(from var(--bright-text-color) 30% 20% h);
-    --grey-text-color: lch(from var(--bright-text-color) l 5% h);
+    /* Red  */
+    --red-light: #df8aa2;
+    --red-dark: #d20f39;
+
+    /* Yellow  */
+    --yellow-light: #bda575;
+    --yellow-dark: #df8e1d;
+
+    /* Green  */
+    --green-light: #8fb68c;
+    --green-dark: #40a02b;
+
+    /* Blue  */
+    --blue-light: #89b4fa;
+    --blue-dark: #04a5e5;
+
+    /* Purple  */
+    --purple-light: #929de2;
+    --purple-dark: #7287fd;
+
+    /* Greyscale */
+    --greyscale-light: #949ab9;
+    --greyscale-dark: #606378; 
+
+
+    @media (prefers-color-scheme: dark) {
+        --main-text-color: #cdd6f4;
+        --page-background: #232634;
+
+        --red-main: var(--red-light);
+        --yellow-main: var(--yellow-light);
+        --green-main: var(--green-light);
+        --blue-main: var(--blue-light);
+        --purple-main: var(--purple-light);
+        --greyscale-main: var(--greyscale-light);
+
+        --red-second: var(--red-dark);
+        --yellow-second: var(--yellow-dark);
+        --green-second: var(--green-dark);
+        --blue-second: var(--blue-dark);
+        --purple-second: var(--purple-dark);
+        --greyscale-second: var(--greyscale-dark);
+
+        body:has(#light-dark:checked) {
+            --main-text-color: #4c4f69;
+            --page-background: #dce0e8;
+            
+            --red-main: var(--red-dark);
+            --yellow-main: var(--yellow-dark);
+            --green-main: var(--green-dark);
+            --blue-main: var(--blue-dark);
+            --purple-main: var(--purple-dark);
+            --greyscale-main: var(--greyscale-dark);
+
+            --red-second: var(--red-light);
+            --yellow-second: var(--yellow-light);
+            --green-second: var(--green-light);
+            --blue-second: var(--blue-light);
+            --purple-second: var(--purple-light);
+            --greyscale-second: var(--greyscale-light);
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        --main-text-color: #4c4f69;
+        --page-background: #dce0e8;
+
+        --red-main: var(--red-dark);
+        --yellow-main: var(--yellow-dark);
+        --green-main: var(--green-dark);
+        --blue-main: var(--blue-dark);
+        --purple-main: var(--purple-dark);
+        --greyscale-main: var(--greyscale-dark);
+
+        --red-second: var(--red-light);
+        --yellow-second: var(--yellow-light);
+        --green-second: var(--green-light);
+        --blue-second: var(--blue-light);
+        --purple-second: var(--purple-light);
+        --greyscale-second: var(--greyscale-light);
+
+        body:has(#light-dark:checked) {
+            --main-text-color: #cdd6f4;
+            --page-background: #232634;
+
+            --red-main: var(--red-light);
+            --yellow-main: var(--yellow-light);
+            --green-main: var(--green-light);
+            --blue-main: var(--blue-light);
+            --purple-main: var(--purple-light);
+            --greyscale-main: var(--greyscale-light);
+
+            --red-second: var(--red-dark);
+            --yellow-second: var(--yellow-dark);
+            --green-second: var(--green-dark);
+            --blue-second: var(--blue-dark);
+            --purple-second: var(--purple-dark);
+            --greyscale-second: var(--greyscale-dark);
+        } 
+    }
+
+    body:has(#red:checked) {
+        --primary-color: var(--red-main);
+        --secondary-color: var(--red-second);
+    }
+    body:has(#yellow:checked) {
+        --primary-color: var(--yellow-main);
+        --secondary-color: var(--yellow-second);
+    }
+    body:has(#green:checked) {
+        --primary-color: var(--green-main);
+        --secondary-color: var(--green-second);
+    }
+    body:has(#blue:checked) {
+        --primary-color: var(--blue-main);
+        --secondary-color: var(--blue-second);
+    }
+    body:has(#purple:checked) {
+        --primary-color: var(--purple-main);
+        --secondary-color: var(--purple-second);
+    }
+    body:has(#greyscale:checked) {
+        --primary-color: var(--greyscale-main);
+        --secondary-color: var(--greyscale-second);
+    }
+
+    --grey-text-color: lch(from var(--primary-color) l 5% h);
+
 }
 
 /* Overall */
 body {
+    background-color: var(--page-background);
     font-family: "IM Fell DW Pica", serif;
     font-size: 18px;
     color: var(--main-text-color);
@@ -23,10 +146,11 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    color: var(--bright-text-color);
+    color: var(--primary-color);
+    
 }
 summary {
-    color: var(--dim-text-color);
+    color: var(--secondary-color);
     font-style: italic;
     &:hover {
         cursor: pointer;
@@ -34,23 +158,106 @@ summary {
     &::marker {
         content: '+ ';
         font-family: 'Courier New', Courier, monospace;
-        color:var(--dim-text-color);
+        color:var(--secondary-color);
         font-weight: bold;
     }
 }
 details[open] summary::marker {
     content: '- ';
-    color: var(--bright-text-color);
+    color: var(--primary-color);
 }
 
-/* Page title  */
+/* Page title + colour picker */
 .title {
+    max-width: fit-content;
+    align-items: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
     font-family: "Qwitcher Grypen", cursive;
     font-weight: 700;
     font-style: normal;
     font-size: 150px;
     margin: 0 0 0 0;
-    color:var(--dim-text-color);
+    background-image: linear-gradient(90deg, var(--red-main), var(--yellow-main), var(--green-main), var(--blue-main), var(--purple-main));
+    color: transparent;
+    background-clip: text;
+}
+
+.colour-scheme-picker {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    list-style-position: inside;
+    text-align: center;
+    label {
+        border-radius: 2rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        &:has(input:checked) {
+            font-style:italic;
+        }
+        &:has(input:focus-visible) {
+            outline: 2px solid var(--main-text-color);
+        }
+        padding: 10px;
+        cursor: pointer;
+        &:hover { 
+            font-style: italic;
+        }
+    }
+    input {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .red {
+        background-color: var(--red-main);
+        &:hover { 
+            background-color:var(--red-second)
+        }
+    }
+    .yellow {
+        background-color: var(--yellow-main);
+        &:hover { 
+            background-color:var(--yellow-second)
+        }
+    }
+    .green {
+        background-color: var(--green-main);
+        &:hover { 
+            background-color:var(--green-second)
+        }
+    }
+    .blue {
+        background-color: var(--blue-main);
+        &:hover { 
+            background-color:var(--blue-second)
+        }
+    }
+    .purple {
+        background-color: var(--purple-main);
+        &:hover { 
+            background-color:var(--purple-second)
+        }
+    }
+    .greyscale {
+        background-color: var(--greyscale-main);
+        &:hover { 
+            background-color:var(--greyscale-second)
+        }
+    }
+}
+
+.light-dark {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: 1px solid var(--main-text-color);
+    border-radius: 2rem;
+    &:hover {
+        background-color: var(--main-text-color);
+        color: var(--page-background)
+    }
 }
 
 /* Navigation menu  */
@@ -60,11 +267,11 @@ details[open] summary::marker {
     list-style-position: inside;
     text-align: center;
     label {
-        color:var(--dim-text-color);
+        color:var(--secondary-color);
         margin-left: 10px;
         margin-right: 10px;
         &:has(input:checked) {
-            color: var(--bright-text-color);
+            color: var(--primary-color);
             font-style:italic;
         }
         &:has(input:focus-visible) {
@@ -118,12 +325,12 @@ body:has(#contact:not(:checked)) #tab-contact {
     font-size: 0px;
 }
 a {
-    color: var(--bright-text-color);
+    color: var(--primary-color);
     &:visited {
-        color: var(--dim-text-color);
+        color: var(--secondary-color);
     }
     &:active {
-        color: var(--bright-text-color);
+        color: var(--primary-color);
     }
     &:hover {
         font-style: italic;
