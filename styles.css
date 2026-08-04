@@ -18,89 +18,12 @@
     --blue-dark: #04a5e5;
 
     /* Purple  */
-    --purple-light: #929de2;
-    --purple-dark: #7287fd;
+    --purple-light: #b38cee;
+    --purple-dark: #9e72fd;
 
     /* Greyscale */
     --greyscale-light: #949ab9;
     --greyscale-dark: #606378; 
-
-
-    @media (prefers-color-scheme: dark) {
-        --main-text-color: #cdd6f4;
-        --page-background: #181825;
-
-        --red-main: var(--red-light);
-        --yellow-main: var(--yellow-light);
-        --green-main: var(--green-light);
-        --blue-main: var(--blue-light);
-        --purple-main: var(--purple-light);
-        --greyscale-main: var(--greyscale-light);
-
-        --red-second: var(--red-dark);
-        --yellow-second: var(--yellow-dark);
-        --green-second: var(--green-dark);
-        --blue-second: var(--blue-dark);
-        --purple-second: var(--purple-dark);
-        --greyscale-second: var(--greyscale-dark);
-
-        body:has(#light-dark:checked) {
-            --main-text-color: #4c4f69;
-            --page-background: #dce0e8;
-            
-            --red-main: var(--red-dark);
-            --yellow-main: var(--yellow-dark);
-            --green-main: var(--green-dark);
-            --blue-main: var(--blue-dark);
-            --purple-main: var(--purple-dark);
-            --greyscale-main: var(--greyscale-dark);
-
-            --red-second: var(--red-light);
-            --yellow-second: var(--yellow-light);
-            --green-second: var(--green-light);
-            --blue-second: var(--blue-light);
-            --purple-second: var(--purple-light);
-            --greyscale-second: var(--greyscale-light);
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        --main-text-color: #4c4f69;
-        --page-background: #dce0e8;
-
-        --red-main: var(--red-dark);
-        --yellow-main: var(--yellow-dark);
-        --green-main: var(--green-dark);
-        --blue-main: var(--blue-dark);
-        --purple-main: var(--purple-dark);
-        --greyscale-main: var(--greyscale-dark);
-
-        --red-second: var(--red-light);
-        --yellow-second: var(--yellow-light);
-        --green-second: var(--green-light);
-        --blue-second: var(--blue-light);
-        --purple-second: var(--purple-light);
-        --greyscale-second: var(--greyscale-light);
-
-        body:has(#light-dark:checked) {
-            --main-text-color: #cdd6f4;
-            --page-background: #1e1e2e;
-
-            --red-main: var(--red-light);
-            --yellow-main: var(--yellow-light);
-            --green-main: var(--green-light);
-            --blue-main: var(--blue-light);
-            --purple-main: var(--purple-light);
-            --greyscale-main: var(--greyscale-light);
-
-            --red-second: var(--red-dark);
-            --yellow-second: var(--yellow-dark);
-            --green-second: var(--green-dark);
-            --blue-second: var(--blue-dark);
-            --purple-second: var(--purple-dark);
-            --greyscale-second: var(--greyscale-dark);
-        } 
-    }
 
     body:has(#red:checked) {
         --primary-color: var(--red-main);
@@ -125,6 +48,94 @@
     body:has(#greyscale:checked) {
         --primary-color: var(--greyscale-main);
         --secondary-color: var(--greyscale-second);
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        /* Dark Mode  */
+        body:has(#light-dark:not(:checked)) {
+            --main-text-color: lch(from var(--primary-color) 100% c h );
+            --page-background: lch(from var(--secondary-color) 20% 7% h);
+
+            --red-main: var(--red-light);
+            --yellow-main: var(--yellow-light);
+            --green-main: var(--green-light);
+            --blue-main: var(--blue-light);
+            --purple-main: var(--purple-light);
+            --greyscale-main: var(--greyscale-light);
+
+            --red-second: var(--red-dark);
+            --yellow-second: var(--yellow-dark);
+            --green-second: var(--green-dark);
+            --blue-second: var(--blue-dark);
+            --purple-second: var(--purple-dark);
+            --greyscale-second: var(--greyscale-dark);
+        }
+
+        /* Light Mode */
+        body:has(#light-dark:checked) {
+            --main-text-color: lch(from var(--primary-color) 20% c h);
+            --page-background: lch(from var(--secondary-color) 100% c h );
+            
+            --red-main: var(--red-dark);
+            --yellow-main: var(--yellow-dark);
+            --green-main: var(--green-dark);
+            --blue-main: var(--blue-dark);
+            --purple-main: var(--purple-dark);
+            --greyscale-main: var(--greyscale-dark);
+
+            --red-second: var(--red-light);
+            --yellow-second: var(--yellow-light);
+            --green-second: var(--green-light);
+            --blue-second: var(--blue-light);
+            --purple-second: var(--purple-light);
+            --greyscale-second: var(--greyscale-light);
+        }
+
+    }
+
+    @media (prefers-color-scheme: light) {
+
+        /* Light Mode */
+        body:has(#light-dark:not(:checked)) {
+            --main-text-color: lch(from var(--primary-color) 20% c h);
+            --page-background: lch(from var(--secondary-color) 100% c h );
+            
+            --red-main: var(--red-dark);
+            --yellow-main: var(--yellow-dark);
+            --green-main: var(--green-dark);
+            --blue-main: var(--blue-dark);
+            --purple-main: var(--purple-dark);
+            --greyscale-main: var(--greyscale-dark);
+
+            --red-second: var(--red-light);
+            --yellow-second: var(--yellow-light);
+            --green-second: var(--green-light);
+            --blue-second: var(--blue-light);
+            --purple-second: var(--purple-light);
+            --greyscale-second: var(--greyscale-light);
+        }
+
+        /* Dark Mode */
+        body:has(#light-dark:checked) {
+            --main-text-color: lch(from var(--primary-color) 100% c h );
+            --page-background: lch(from var(--secondary-color) 20% 7% h);
+
+            --red-main: var(--red-light);
+            --yellow-main: var(--yellow-light);
+            --green-main: var(--green-light);
+            --blue-main: var(--blue-light);
+            --purple-main: var(--purple-light);
+            --greyscale-main: var(--greyscale-light);
+
+            --red-second: var(--red-dark);
+            --yellow-second: var(--yellow-dark);
+            --green-second: var(--green-dark);
+            --blue-second: var(--blue-dark);
+            --purple-second: var(--purple-dark);
+            --greyscale-second: var(--greyscale-dark);
+        }
+
     }
 
     --grey-text-color: lch(from var(--primary-color) l 5% h);
